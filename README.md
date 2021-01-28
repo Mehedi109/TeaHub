@@ -4,4 +4,4 @@ Username:admin
 
 Password:admin
 
-Url of the admin panel: http://localhost:8000/admin_panel
+Url of the admin panel: localhost:8000/admin_panel
