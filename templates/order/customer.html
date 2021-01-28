@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href='{%static "assets/css/bootstrap.min.css" %}'/>
+	</head>
+	<body>
+		
+		{% if user.is_staff or user.is_superuser %}
+		{{user.username}}
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 my-5" style="box-shadow:0px 0px 10px gray">
+					{% if msz %}
+						<div class="{{cls}} mt-3">{{msz}}</div>
+					{% endif %}
+
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Customer</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for post in post %}
+								<tr>
+									<!--<td><a href=" customer_details/{{post.user.id}} ">{{post.user}}</a></td>-->	
+									<td><button type="button" data-toggle="modal" data-target="#exampleModalLong1" href=" {% url 'customer_details' id=post.user.id %} ">{{post.user}}</button></td>									
+									<td><button onclick="remove_cart('{{post.id}}')" class="btn btn-danger">&times; Remove</button></td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+	<script src='{%static "assets/js/jquery.js" %}'></script>
+	<script src='{%static "assets/js/jquery-1.12.4.min.js" %}'></script>
+	<!-- Popper JS -->
+    <script src='{%static "assets/js/popper.min.js" %}'></script>
+	<!-- Bootstrap JS -->
+	<script src='{%static "assets/js/bootstrap.min.js" %}'></script>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!--Jquery Plugin For Ajax-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href='{%static "assets/css/bootstrap.min.css" %}'/>
+</head>
+<body>
+{% if user.is_authenticated %}
+<div class="container">
+	<div class="row py-5">
+		<h2 style="margin-top:15px;margin-bottom:-20px;font-size:30px">Product Details</h2>
+		<div class="col-md-12 my-5" style="box-shadow:0px 0px 10px gray;">
+			{% if msz %}
+				<div class="{{cls}} mt-3">{{msz}}</div>
+			{% endif %}
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Product</th>
+						<th>Quantity</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for item in items%}
+						<tr>
+							<td>{{item.product}}</td>
+							<td>{{item.quantity}}</td>
+							<td>{{item.product.price}}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+	
+			<table class="table">
+				<tr>
+					<td>Total Amount</td>
+					<td id="item_total"></td>
+				</tr>
+				<tr>
+					<td>Quantity</td>
+					<td id="quantity"></td>
+				</tr>
+				<tr>
+					<td>Delivery</td>
+					<td>Free</td>
+				</tr>
+			</table>
+</div>
+		<h2 style="margin-top:15px;margin-bottom:-20px;font-size:30px;">Customer Details</h2>
+		<div class="col-md-12 my-5" style="box-shadow:0px 0px 10px gray;">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Email</th>
+						<th>Phone</th>
+						<th>Address</th>
+						<th>Postal Code</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for post in post%}
+						<tr id="row{{post.id}}">
+							<td>{{post.email_address}}</td>
+							<td>{{post.phone}}</td>
+							<td>{{post.address}}</td>
+							<td>{{post.postal_code}}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script>
+		function grandTotal(){
+			$.ajax({
+				url:"{% url 'customer_cart_data' %}",
+				type:'get',
+					success:function(data){
+					console.log(data);
+					$("#item_total").html("TK"+data.total);
+					$("#quantity").html(data.quantity+"items")
+					$("#btamt").html("TK"+data.total);
+					$("#single_price").html("TK"+data.price);
+				}
+			})
+		}
+		grandTotal()
+	</script>
+{% endif %}
+</body>
+</html>

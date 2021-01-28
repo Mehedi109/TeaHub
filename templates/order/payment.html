@@ -1,0 +1,10 @@
+<h2>ggg</h2>
+<form action="{% url 'cart' %}">
+	{% csrf_token %}
+<script src="https://checkout.com/checkout.js" class="stripe-button" type="text/javascript">
+	data-key="{{key}}"
+	data-description="Payment Gateway"
+	data-amount="500"
+	data-locale="auto"
+</script>
+</form>

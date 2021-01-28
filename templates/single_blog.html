@@ -1,0 +1,59 @@
+
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>	
+</head>
+
+<body>
+	{% block body %}
+	<div class="top fixed_all_page" style="margin-top:150px">
+	  <div class="container">	  
+		  <div class="blog">
+				<h3 style="font-size:25px">{{post.title}} | {{post.Category}}</h3>
+				<hr>
+				<span>{{post.posted_on}}</span>
+				<hr>
+				<p>{{post.body|linebreaks}}</p>
+		  </div>
+		  <h3 style="font-weight:bold;margin-top:50px;font-size:30px;margin-bottom:15px">Comments:</h3>
+		  <h2 style="font-weight:bold;font-size:25px">{{comment.count}} comments</h2><br>
+		  {% for comment in comment %}
+		  <div class="comment" style="padding:10px">
+		  	<div class="col-md-1">
+		  		<img src="/static/assets/img/user2.png">
+		  	</div>	
+		  	<div class="col-md-11">
+		 	<p class="font-weight-bold">
+		  	<h4 style="margin-top:10px;font-size:20px">{{comment.name}}</h4><br>
+		  	<h4>{{comment.user.username}}</h4>
+		  	<h4 style="margin-top:-20px;margin-bottom:20px;font-size:20px">{{comment.email}}</h4>
+		    </p>
+		  	{{comment.comment | linebreaks}} <hr>	  	 
+		    </div>    
+		  </div>
+		 {%endfor%}
+		  <div class="card-body">
+		   {% if new_comment %}
+		  	<div class="alert alert-success" role="alert">
+		  		Your comment is awaiting moderation
+		  	</div>
+		  	{% else %}
+		  	<h3 style="margin-top:30px;margin-bottom:20px;color:#000;font-weight:bold">Leave a comment</h3>
+		  	<form method="POST" action="" style="margin-top:1.3em">
+		    {% csrf_token %}
+			  {{form.as_p}}
+		    <button type="submit" class="btn btn-primary">Post </button>
+		  	</form>
+		   {%endif%}
+
+		  </div>
+	  </div>
+	</div>
+	</div>
+
+	{% endblock %}
+</body>
+</html>

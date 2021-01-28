@@ -1,0 +1,67 @@
+{%load static%}
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	 <!-- Title -->
+	<title>tea.com | online delivery website</title>
+	<!-- Google Fonts -->
+    <link href='{%static "https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i" %}' rel="stylesheet"/> 
+	<!-- Font Awesome Css -->
+	<link rel="stylesheet" type="text/css" href='{%static "assets/css/all.min.css" media="all" %}'/>
+	<!-- favicon Css -->
+	<link rel="shortcut icon" href='{%static "assets/img/favicon.png"%}'/>
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href='{%static "assets/css/bootstrap.min.css" %}'/>
+	<!-- owl carousel css -->
+	<link rel="stylesheet" type="text/css" href='{%static "assets/css/owl.carousel.css" media="all" %}'/>
+	<!--magnific-popup-->
+	<link rel="stylesheet" type="text/css" href='{%static "assets/css/magnific-popup.css" media="all" %}'/>
+	<!-- Main css -->
+	<link rel="stylesheet" type="text/css" href='{%static "assets/css/style.css"%}'/>
+</head>
+<body>
+	{% if request.user.is_staff or request.user.is_superuser%}	
+		<div class="admin_book">
+			<div class="head_top">
+				<div class="container-fluid no_padding">
+					<div class="head_left">
+						<p style="font-size:18px">Admin panel</p>
+					</div>
+					<div class="admin_sidebar_menu">
+						<div class="menu text-left">
+							<ul>
+								<li><a href="/admin_mainTea"><i style="font-size:14px" class="fa fa-clone"></i>Main Tea</a></li>
+								<li><a href="/admin_favouriteTea"><i style="font-size:14px" class="fa fa-clone"></i>Favourite Tea</a></li>
+								<li><a href="/order/customer"><i style="font-size:14px" class="fa fa-clone"></i>Order</a></li>
+								<li><a href="/admin_blog"><i style="font-size:14px" class="fa fa-clone"></i>Blog List</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="admin_area">
+			<div class="container-fluid no_padding">
+				<div class="head_right" style="padding:22px"></div>
+			</div>
+		</div>
+			</div>
+			<div class="admin-right" style="float:right;width:85%">
+			<div class="col-md-12">
+			{% block admin%}
+
+			{% endblock %}
+			</div>
+			</div>
+			{%else%}
+		
+			
+			
+					<div class="messages" style="width:70%;margin-left:180px;padding-top:">
+			            <center><div class="message2" style="padding:5rem;font-size:2rem;color:red;font-family:sans-serif;background:#FFF3CD;line-height:40px">Sorry,you are not authorized to access this page</div></center>			            
+			         </div>
+			       
+			{% endif %}
+   </body>
+</html>

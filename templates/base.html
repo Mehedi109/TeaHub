@@ -1,0 +1,164 @@
+{%load static%}
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	 <!-- Title -->
+	<title>tea.com | online delivery website</title>
+	<!-- Google Fonts -->
+    <link href='{%static "https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i" %}' rel="stylesheet"/> 
+	<!-- Font Awesome Css -->
+	<link rel="stylesheet" type="text/css" href='{%static "assets/css/all.min.css" media="all" %}'/>
+	<!-- favicon Css -->
+	<link rel="shortcut icon" href='{%static "assets/img/favicon.png"%}'/>
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href='{%static "assets/css/bootstrap.min.css" %}'/>
+	<!-- owl carousel css -->
+	<link rel="stylesheet" type="text/css" href='{%static "assets/css/owl.carousel.css" media="all" %}'/>
+	<!--magnific-popup-->
+	<link rel="stylesheet" type="text/css" href='{%static "assets/css/magnific-popup.css" media="all" %}'/>
+	<!--Jquery Plugin For Ajax-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Main css -->
+	<link rel="stylesheet" type="text/css" href='{%static "assets/css/style.css"%}'/>
+</head>
+<body>
+	<!-- header_area start -->
+	<nav class="navbar fixed-top navbar-expand-md flex-nowrap navbar-new-top">
+            <a href="index.html"><h2 class="heading"> tea<span class="logo_color">.com</span></h2></a>
+            <ul class="nav navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav flex-row header_link">
+                <li class="nav-item">
+                    <a class="nav-link px-2"><i class="fas fa-cart-plus" aria-hidden="true"></i></a>
+                </li>
+                {% if user.is_authenticated%}
+				<li><a class="box_btn" href="/accounts/logout">Logout</a></li>
+				{% else %}
+				<li><a class="box_btn" href="/accounts/login">Login</a></li>		
+				{% endif %}
+            </ul>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    </nav>
+	<nav class="navbar fixed-top navbar-expand-md navbar-new-bottom manu_bar">
+            <div class="navbar-collapse collapse pt-2 pt-md-0" id="navbar2">
+                <ul class="navbar-nav w-100 justify-content-center px-3">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/home">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">contact</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+	<!-- header_area end -->
+	{% block body %}
+
+	{% endblock %}
+	<!-- footer_area start -->
+	<section class="footer_area pt-50 pb-50">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="single_footer text-center">
+						<h2>tea<span class="logo_color">.com</span></h2>
+						<h5>tea company</h5>
+						<div class="customer_help">
+							<h3>Customer Help</h3>
+							<p>0171-800-8327</p>
+						</div>
+						<div class="social_heading">
+							<h3>Follow Us</h3>
+						</div>
+						<div class="social_icon">
+							<a href=""><i class="fab fa-facebook-f"></i></a>
+							<a href=""><i class="fab fa-twitter"></i></a>
+							<a href=""><i class="fab fa-dribbble"></i></a>
+							<a href=""><i class="fab fa-google"></i></a>
+							<a href=""><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="single_footer">
+						<h4>information link</h4>
+						<ul>
+							<li><a href=""><i class="fas fa-angle-right"></i>contact us</a></li>
+							<li><a href=""><i class="fas fa-angle-right"></i>blog</a></li>
+							<li><a href=""><i class="fas fa-angle-right"></i>shopping bag</a></li>
+							<li><a href=""><i class="fas fa-angle-right"></i>how you shopping our site</a></li>
+							<li><a href=""><i class="fas fa-angle-right"></i>question</a></li>
+							<li><a href=""><i class="fas fa-angle-right"></i>our conditions</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="single_footer">
+						<h4>Contact</h4>
+						<ul>
+							<li><i class="far fa-envelope"></i>Email: tea@gmail.com </li>
+							<li><i class="fas fa-mobile-alt"></i>mobile:+0171-101-9894</li>
+							<li><i class="fas fa-mobile-alt"></i>Phone: +0888-72278</li>
+							<li><i class="fas fa-fax"></i>Fax: +88-(0)-202-0000</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="single_footer">
+						<h4>Newsletter</h4>
+						<p class="title_underline">Sign up to our newsletter and save 15% on your first order!</p>
+						<form action="#">
+							<div class="form_field">
+								<input type="text" placeholder="enter email"/>
+								<a class="box_btn" href="">Sign up</a>
+							</div>
+						</form>
+					</div>
+				</div>	
+			</div>	
+		</div>
+	</section>
+	<!-- footer_area end -->
+	<!-- copyright area start-->
+	<section class="copyright_area pt-10 pb-10">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<p>All Right Resceved &copy; 2020 | design by Mehedi Alam</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- copyright area end-->
+	<!-- js  code -->
+	<!-- library function-->
+	<script src='{%static "assets/js/jquery.js" %}'></script>
+	<script src='{%static "assets/js/jquery-1.12.4.min.js" %}'></script>
+	<!-- Popper JS -->
+    <script src='{%static "assets/js/popper.min.js" %}'></script>
+	<!-- Bootstrap JS -->
+	<script src='{%static "assets/js/bootstrap.min.js" %}'></script>
+	<!-- owl.carousel.min.js -->
+	<script src='{%static "assets/js/owl.carousel.min.js" %}'></script>
+	<!-- Manific Popup JS -->
+    <script src='{%static "assets/js/jquery.magnific-popup.min.js" %}'></script>
+	<!-- Isotope JS -->
+    <script  src='{%static "assets/js/isotope.min.js" %}'></script>
+	<!-- counterup.min.js -->
+	<script src='{%static "assets/js/jquery.counterup.min.js" %}'></script>
+	<!-- Imageload JS -->
+    <script  src='{%static "assets/js/imageloaded.min.js" %}'></script>
+	<script src='{%static "assets/js/wow.min.js" %}'></script>
+	<!-- Waypoint JS -->
+    <script src='{%static "assets/js/waypoint.min.js" %}'></script>
+	<!-- main js -->
+	<script src='{%static "assets/js/main.js" %}'></script>
+</body>	

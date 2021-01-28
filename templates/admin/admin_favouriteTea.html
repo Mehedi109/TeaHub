@@ -1,0 +1,44 @@
+{%extends 'admin/admin.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<body>
+	{% block admin%}
+	<div class="blog-post" id="exampleModalLong">
+		<div class="container">
+			<h2 style="margin-bottom:10px;font-size:25px">Tea List</h2>
+			<a href="favourite_tea" class="btn btn-primary admin-btn" style="text-align:center;margin-left:850px;margin-bottom:20px">Add New Tea</a>
+			<!--<div class="ajax" id="exampleModalLong"> -->
+			<table class="table table-striped" >
+				<thead class="alert-danger" style="color:#000">
+					<tr>
+						<td>Image</td>
+						<td>Name</td>
+						<td>Short Description</td>
+						<td>Price</td>
+						<td>Action</td>
+					</tr>
+				</thead>
+				<tbody>
+					
+					{% for post in post %}
+					<tr>
+					<td><img src="{{ post.image.url }}" width="100px"></td>
+					<td>{{post.title}}</td>
+					<td>{{post.desc|safe|truncatewords:"50"}}</td>
+					<td>TK{{post.price}}</td>
+					<td>
+						<a style="margin-bottom:10px" href="favouriteTea_update/{{post.id}}" class="btn btn-info">Edit</a>
+						<a href="favouriteTea_delete/{{post.id}}" class="btn btn-danger">Delete</a>
+					</td>
+					</tr>
+					{% endfor %}
+
+				</tbody>
+			</table>
+		<!--</div> ajax-->
+		</div>
+	</div>
+	{% endblock %}
+	</body>
+</html>

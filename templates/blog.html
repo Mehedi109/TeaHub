@@ -1,0 +1,29 @@
+{%extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+</head>
+<body>
+	{% block body%}
+	<div class="top fixed_all_page" style="margin-top:150px">
+	<div class="container">
+	  <div class="row">
+		<div class="blog">
+		{% for p in post %}
+		<h2 style="margin-bottom:6px;font-size:25px">{{p.title}}</h2>
+			<p style="margin-bottom:20px">{{p.Category}} | {{p.posted_on}} </p>
+			<p style="margin-right:;margin-left:0px;margin-bottom:px">{{p.body|safe|truncatewords:"50"|linebreaks}}</p>
+			<figure style="margin-bottom:30px;margin-top:10px">
+				<a href="{% url 'single_blog' id=p.id %}">Read More</a><br><br><hr>
+			</figure>	 
+		{% endfor %}
+		</div>
+	  </div>
+	</div>
+	</div>
+	{% endblock %}
+</body>
+</html>
+

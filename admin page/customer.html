@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+   <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>chaa.com | admin page</title> 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i" rel="stylesheet"/> 
+	<!-- favicon Css -->
+	<link rel="shortcut icon" href="assets/img/favicon.png"/>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="assets/css/all.min.css" media="all"/>
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Main Css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+	</head> 
+	<body>
+		<!-- admin_top_area start-->
+		<section class="admin_top_area">
+			<div class="container_fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="admin_top heading">
+							<a href="index.html"><h2 class="heading"> chaa<span class="logo_color">.com</span></h2></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>						
+		<!-- admin_left_area end -->					
+		<!-- admin_bottom_area start-->
+		<section class="admin_bottom_area">
+			<div class="container_fluid">
+				<div class="row">	
+					<div class="col-md-7">
+						<div class="sidebar_menu">
+							<div class="menu">
+								<ul>
+									<li><a href="login_data.html"><i class="far fa-user"></i>login</a></li>
+									<li><a href="customer.html"><i class="fab fa-accusoft"></i>customer_info</a></li>
+									<li><a href="order.html"><i class="far fa-bookmark"></i>order</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>	
+					<div class="col-md-5">
+						<div class="log_manu">
+							<ul>
+								<li><a href="login.html">login</a></li>
+								<li><a href="">logout</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- admin_bottom_area end -->
+		<!--search_add_area start-->
+		<section class="search_add_area">
+			<div class="container">
+				<div class="row">	
+					<div class="col-md-7">
+						<div class="search_area">
+							<form action="">
+								<input type="text" placeholder="search"/>
+								<a href=""><i class="fas fa-search"></i></a>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-5">	
+						<div class="add_member">
+							<!-- Button trigger modal -->
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+							Add Order
+							</button>
+							<!-- Modal -->
+							<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLongTitle">ADD Order</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											  <span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<div class="faculty_area">
+												<div class="faculty_body">
+													<form action="">
+														<div class="form-group">
+															<label for="exampleInputName">Name</label>
+															<input type="name" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Name">
+														</div>
+														<div class="form-group">
+															<label for="exampleInputGender">gender</label>
+															<select class="form-control">
+																<option>gender</option>
+																<option>male</option>
+																<option>female</option>
+															</select>
+														</div>
+														<div class="form-group">
+															<label for="exampleInputPhone">Phone</label>
+															<input type="Phone" class="form-control" id="exampleInputPhone" aria-describedby="emailHelp" placeholder="Phone">
+														</div>
+														<div class="form-group">
+															<label for="exampleInputPhone">0rder</label>
+															<input type="order" class="form-control" id="exampleInputPhone" aria-describedby="emailHelp" placeholder="order no.">
+														</div>
+														<button type="submit" class="btn btn-primary">Submit</button>
+													</form>
+												</div>
+											</div>	
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									    </div>
+									</div>
+								</div>
+							</div>
+						</div>				
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--search_add_area end-->
+	<!-- customer_info start-->
+	<section class="customer_info">
+		<div class="container-fluid no_padding">
+			<div class="row">
+				<div class="col-md-12">
+					<!-- login_list -->
+					<div class="login_list">
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+								  <th scope="col">id</th>
+								  <th scope="col">email</th>
+								  <th scope="col">firstname</th>
+								  <th scope="col">lastname</th>
+								  <th scope="col">address</th>
+								  <th scope="col">country</th>
+								  <th scope="col">phone</th>
+								  <th scope="col">Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>@mdo</td>
+									<td>mahi</td>
+									<td>ahmed</td>
+									<td>zindabazar</td>
+									<td>bangladesh</td>
+									<td>0174345525</td>
+									<td>
+									<!-- Button trigger modal -->
+										<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalLong1">
+											View
+										</button>
+										<!-- Modal -->
+										<div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle1" aria-hidden="true">
+										  <div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLongTitle1"> View Profile</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													  <span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<div class="faculty_area">
+														<div class="faculty_body">
+															<div class="card" style="width: 18rem;">
+															  <img src="assets/images/1.jpg" class="card-img-top" alt="...">
+															  <div class="card-body">
+																<h5 class="card_title">kazi amran</h5>
+																<p>mirabazar, sylhet</p>
+																<span>Bangladesh</span>
+															  </div>
+															</div>
+														</div>
+													</div>	
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+												</div>
+											</div>
+										  </div>
+										</div>
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong2">
+										Edit
+										</button>
+										<!-- Modal -->
+										<div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle2" aria-hidden="true">
+										  <div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLongTitle2">EDIT CUSTOMER</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													  <span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<div class="faculty_area">
+														<div class="faculty_body">
+															<form action="">
+																<div class="form-group">
+																	<label for="exampleInputName">Name</label>
+																	<input type="name" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Name">
+																</div>
+																<div class="form-group">
+																	<label for="exampleInputGender">gender</label>
+																	<select class="form-control">
+																		<option>gender</option>
+																		<option>male</option>
+																		<option>female</option>
+																	</select>
+																</div>
+																<div class="form-group">
+																	<label for="exampleInputPhone">Phone</label>
+																	<input type="Phone" class="form-control" id="exampleInputPhone" aria-describedby="emailHelp" placeholder="Phone">
+																</div>
+																<button type="submit" class="btn btn-primary">Submit</button>
+															</form>
+														</div>
+													</div>	
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+												</div>
+											</div>
+										  </div>
+										</div>
+										<button type="button" class="btn btn-danger">Delete</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>@mdo</td>
+									<td>mahi</td>
+									<td>ahmed</td>
+									<td>zindabazar</td>
+									<td>bangladesh</td>
+									<td>0174345525</td>
+									<td>
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalLong1">
+										View
+										</button>
+										<!-- Modal -->
+										<div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle1" aria-hidden="true">
+										  <div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLongTitle1"> View Profile</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													  <span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<div class="faculty_area">
+														<div class="faculty_body">
+															<div class="card" style="width: 18rem;">
+															  <img src="assets/images/1.jpg" class="card-img-top" alt="...">
+															  <div class="card-body">
+																	<h5 class="card_title">kazi amran</h5>
+																	<p>mirabazar, sylhet</p>
+																	<span>Bangladesh</span>
+																</div>
+															</div>
+														</div>
+													</div>	
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+												</div>
+											</div>
+										  </div>
+										</div>
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong2">
+										Edit
+										</button>
+										<!-- Modal -->
+										<div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle2" aria-hidden="true">
+										  <div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLongTitle2">EDIT CUSTOMER</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													  <span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<div class="faculty_area">
+														<div class="faculty_body">
+															<form action="">
+																<div class="form-group">
+																	<label for="exampleInputName">Name</label>
+																	<input type="name" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Name">
+																</div>
+																<div class="form-group">
+																	<label for="exampleInputGender">gender</label>
+																	<select class="form-control">
+																		<option>gender</option>
+																		<option>male</option>
+																		<option>female</option>
+																	</select>
+																</div>
+																<div class="form-group">
+																	<label for="exampleInputPhone">Phone</label>
+																	<input type="Phone" class="form-control" id="exampleInputPhone" aria-describedby="emailHelp" placeholder="Phone">
+																</div>
+																<button type="submit" class="btn btn-primary">Submit</button>
+															</form>
+														</div>
+													</div>	
+												</div>
+											<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+											</div>
+											</div>
+										  </div>
+										</div>
+										<button type="button" class="btn btn-danger">Delete</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- customer_info start-->
+    <!-- copyright area end-->
+	<!-- js  code -->
+	<!-- library function -->
+	<script  src="assets/js/jquery.js"></script>
+	<!-- Popper JS -->
+    <script src="assets/js/popper.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- owl.carousel.min.js -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- Manific Popup JS -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Isotope JS -->
+    <script  src="assets/js/isotope.min.js"></script>
+	<!-- counterup.min.js -->
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<!-- Imageload JS -->
+    <script  src="assets/js/imageloaded.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<!-- Waypoint JS -->
+    <script src="assets/js/waypoint.min.js"></script>
+	<!-- main js -->
+	<script src="assets/js/main.js"></script>
+   </body>
+</html>
